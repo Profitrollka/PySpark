@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from pyspark.sql import functions as f
 from pyspark.sql.types import IntegerType
 from operator import add
