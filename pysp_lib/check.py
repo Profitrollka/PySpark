@@ -9,7 +9,7 @@ def transform_inn_col(dataframe, inn_col):
      at the beginning of the INN, if the length of the INN is not correct.)
     :param dataframe: Pyspark DataFrame for processing
     :param inn_col: column name contains INN
-    :return Pyspark DataFrame.
+    :return Pyspark DataFrame with extra column containing fixed INN.
     """
     inn_col_fixed = '{}_fixed'.format(inn_col)
     dataframe_filtered = dataframe.filter(f.col(inn_col).isNotNull()) \
@@ -56,3 +56,4 @@ def check_inn(dataframe, inn_col):
     check_sum_inn = check_sum_inn_10 | check_sum_inn_12
 
     return dataframe.withColumn('{}_valid_flag'.format(inn_col), f.when(check_sum_inn, f.lit(1)).otherwise(f.lit(0)))
+
