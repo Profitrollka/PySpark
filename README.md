@@ -23,6 +23,8 @@ df_transform = transform_inn_col(pySpark_df, 'inn')
 # Check validity of INN by counting check sum, return Pyspark DataFrame with extra column containing flag validity of INN.
 test_check_inn_func_fixed_inn = check_inn(test_transform_func, 'inn_fixed')
 
+#More information about usage in the file Test_checkpy.ipynb
+
 ```
 
 ## Contributing
