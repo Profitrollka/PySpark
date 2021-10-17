@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 def readme():
-    with open('README.rst') as f:
+    with open('README.md') as f:
         return f.read()
 
 
@@ -16,18 +16,14 @@ setup(name='pysp_lib',
         'Topic :: Text Processing :: Linguistic',
       ],
       keywords='pyspark',
-      url='https://github.com/Profitrollka/PySpark',
+      url='https://github.com/Profitrollka/PySpark/pysp_lib',
       author='Alena Kapustyan',
       author_email='alenocka.1989@gmail.com',
       license='GNU',
       packages=['pysp_lib'],
+      python_requires='>=3.0, <4',
       install_requires=[
           'pyspark',
       ],
-      test_suite='nose.collector',
-      tests_require=['nose', 'nose-cover3'],
-      entry_points={
-          'console_scripts': ['funniest-joke=funniest.command_line:main'],
-      },
       include_package_data=True,
       zip_safe=False)
