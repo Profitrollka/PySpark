@@ -6,7 +6,7 @@ pysp_lib is a library for processing data on Pyspark.
 
 You need to use the proper git URL:
 
-pip install git+https://github.com/Profitrollka/PySpark/pysp_lib.git
+pip install git+https://github.com/Profitrollka/pysp_lib
 
 
 ## Usage
