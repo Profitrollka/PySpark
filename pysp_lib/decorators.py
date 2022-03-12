@@ -1,9 +1,11 @@
 from datetime import datetime, timedelta
+from functools import wraps
 
 def time_counter(func):
 
     """Decorator for calculating the time of the function"""
 
+    @wraps(func)
     def wrapper(*args, **kwargs):
         start = datetime.now()
         print(f'Start function {func.__name__}: {start}')
